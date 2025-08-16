@@ -1,12 +1,34 @@
-# React + Vite
+# Web-based-Wallet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Web-based wallet generator for **Solana** and **Ethereum** using a single mnemonic seed phrase. This project creates multiple wallets, view public addresses, and optionally toggle visibility of private keys.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Generate a **new mnemonic seed phrase**.
+- Derive **Solana** and **Ethereum** wallets from the mnemonic.
+- View **public and private keys** for each wallet.
+- Toggle visibility of private keys for security.
+- Create multiple wallets from the same mnemonic.
 
-## Expanding the ESLint configuration
+## Tech Stack / Dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** – Frontend framework
+- **bip39** – Mnemonic generation and seed derivation
+- **ed25519-hd-key** – Solana key derivation
+- **@solana/web3.js** – Solana wallet handling
+- **tweetnacl** – Solana keypair generation
+- **ethers** – Ethereum wallet handling
+
+## Usage
+
+Click Create Seed Phrase to generate a mnemonic.
+
+View Solana and Ethereum wallets derived from the mnemonic.
+
+Click Create New Wallet to generate additional accounts.
+
+Use the Show / Hide buttons to toggle private key visibility.
+
+## Security Note
+
+**This project is for educational purposes. Do not use generated wallets for real funds, as private keys are exposed in the browser.**
